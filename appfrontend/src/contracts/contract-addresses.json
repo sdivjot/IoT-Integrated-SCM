@@ -1,0 +1,20 @@
+[
+  {
+    "SupplyChainLifecycle": "0x00899f961bb3B328b03F38524B164A1021D0e2fC"
+  },
+  {
+    "Distributor": "0xb5539ba2c8E0596a54Dbeb6F2E8C7586672dB40F"
+  },
+  {
+    "Producer": "0x57016019c16c06CC2B5B6D063473A66B6DA6621b"
+  },
+  {
+    "Retailer": "0x677953f23012727d7eC655704fB07f1dF81B4d6E"
+  },
+  {
+    "Users": "0xf80026afab95054e869aD0E32b64b6ff93daf0f6"
+  },
+  {
+    "Authenticity": "0x7bd86Fb4f253657bF67F1DB2FA0964DE30e8Fcc9"
+  }
+]
