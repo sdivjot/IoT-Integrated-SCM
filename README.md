@@ -9,3 +9,4 @@ In the root folder, run `simulate_iot.py` to add products onto the hosted chain,
 ![image](https://github.com/user-attachments/assets/44727197-4b8d-4973-9605-e7926c199d8a)
 
 Deployed Link: https://iot-integrated-scm.vercel.app/
+(you need Coinbase or Metamask)
