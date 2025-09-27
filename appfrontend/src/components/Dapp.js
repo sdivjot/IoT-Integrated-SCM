@@ -111,18 +111,41 @@ export class Dapp extends React.Component {
   }
 
   async switchChain() {
-    const chainIdHex = `0x${SEPOLIA_NETWORK_ID.toString(16)}`
+  const chainIdHex = "0x11155111"; // Sepolia
+
+  try {
+    // Try switching first
     await window.ethereum.request({
       method: "wallet_switchEthereumChain",
       params: [{ chainId: chainIdHex }],
     });
-    await this.initialize(this.state.selectedAddress);
+  } catch (error) {
+    if (error.code === 4902) {
+      // Sepolia not added → add it
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [{
+          chainId: chainIdHex,
+          chainName: "Sepolia Test Network",
+          nativeCurrency: { name: "SepoliaETH", symbol: "ETH", decimals: 18 },
+          rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/IczRrCI0W7PLoMNcIDR24fOrz4fLq19H"], // replace with your key
+          blockExplorerUrls: ["https://sepolia.etherscan.io"],
+        }],
+      });
+    } else {
+      console.error("Failed to switch chain:", error);
+    }
   }
+
+  // Re-initialize after switching
+  await this.initialize(this.state.selectedAddress);
+}
 
   // This method checks if the selected network is Localhost:8545
   checkNetwork() {
-    if (window.ethereum.networkVersion !== SEPOLIA_NETWORK_ID) {
-      this.switchChain();
-    }
+  const sepoliaHex = "0x11155111";
+  if (window.ethereum.chainId !== sepoliaHex) {
+    this.switchChain();
   }
+}
 }
