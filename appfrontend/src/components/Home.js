@@ -268,7 +268,6 @@ export default class Home extends React.Component {
 
     render() {
         if(this.props.isAuthenticated || this.props.isSuccessfullyRegistered) {
-            //Updates registration state globally to render header and footer.
             this.props.updateAuth(true);
 
             //Updates userType to the new user type chosen for new user registration for consistent usage in the code.

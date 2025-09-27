@@ -8,7 +8,6 @@ import Register from "./Register";
 import ConfirmRegistration from "./ConfirmRegistration";
 
 import Header from "./static/Header";
-import Footer from "./static/Footer";
 import { CircularPageLoader } from "./static/CircularPageLoader";
 import NotFound from "./static/NotFound";
 import NewUser from "./static/NewUser";
@@ -94,7 +93,6 @@ export const InitializedContent = ({contract, currentAddress}) => {
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>
-                <Footer isAuthenticated={isAuth} />
             </Router>
         );
     } else {

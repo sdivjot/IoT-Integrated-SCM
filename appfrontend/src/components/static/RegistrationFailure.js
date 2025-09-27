@@ -47,25 +47,7 @@ const RegistrationFailure = ({isAuthenticated}) => {
                         <p style={{ paddingBottom: "0" }}>Please try to register again after some time. Redirecting to registration page.</p>
                         <p style={{ fontSize: 12, padding: 0 }}>Please <Link className="ModalLink" href="/new-user">click here</Link> if you're not redirected automatically.</p>
                         <p style={{ fontSize: 12, padding: "0" }}>Contact us if the issue persists.</p>
-                        <Divider style={{ marginBottom: 20 }} />
-                        {/* social media */}
-                        <Grid container justifyContent="center">
-                                <Grid item xs={2}>
-                                    <Link className="ModalLink" href="https://github.com/Shira98" target="_blank" >{" "}<GitHubIcon /></Link>
-                                </Grid>
-                                <Grid item xs={1}> 
-                                    <Link className="ModalLink" href="https://twitter.com/d_praneetha" target="_blank" >{" "}<TwitterIcon /></Link>
-                                </Grid>
-                                <Grid item xs={2}>
-                                    <Link className="ModalLink" href="https://www.linkedin.com/in/praneetha-d-13996517a/" target="_blank">{"   "}
-                                        <LinkedInIcon />
-                                    </Link>
-                                </Grid>
-                            </Grid>
-                            <br/>
-                            Powered by <Link className="ModalLink" href="https://mui.com/" target="_blank" >material-ui</Link> and 
-                            <Link className="ModalLink" href="https://reactjs.org/" target="_blank" 
-                            > {" "}React</Link> &copy; {new Date().getFullYear()} 
+                        <Divider style={{ marginBottom: 20 }} /> 
                     </center>
                 </Paper>
             </Backdrop>
