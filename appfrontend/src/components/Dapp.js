@@ -111,7 +111,7 @@ export class Dapp extends React.Component {
   }
 
   async switchChain() {
-  const chainIdHex = "0x11155111"; // Sepolia
+  const chainIdHex = "0xaa36a7"; // Hex for 11155111
 
   try {
     // Try switching first
@@ -126,9 +126,9 @@ export class Dapp extends React.Component {
         method: "wallet_addEthereumChain",
         params: [{
           chainId: chainIdHex,
-          chainName: "Sepolia Test Network",
-          nativeCurrency: { name: "SepoliaETH", symbol: "ETH", decimals: 18 },
-          rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/IczRrCI0W7PLoMNcIDR24fOrz4fLq19H"], // replace with your key
+          chainName: "Sepolia",
+          nativeCurrency: { name: "SepoliaETH", symbol: "SepoliaETH", decimals: 18 },
+          rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/IczRrCI0W7PLoMNcIDR24fOrz4fLq19H"], // your key
           blockExplorerUrls: ["https://sepolia.etherscan.io"],
         }],
       });
@@ -141,11 +141,12 @@ export class Dapp extends React.Component {
   await this.initialize(this.state.selectedAddress);
 }
 
-  // This method checks if the selected network is Localhost:8545
-  checkNetwork() {
-  const sepoliaHex = "0x11155111";
+checkNetwork() {
+  const sepoliaHex = "0xaa36a7"; // Hex for 11155111
   if (window.ethereum.chainId !== sepoliaHex) {
     this.switchChain();
   }
 }
+
 }
+
