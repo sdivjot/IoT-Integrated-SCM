@@ -128,7 +128,7 @@ export class Dapp extends React.Component {
           chainId: chainIdHex,
           chainName: "Sepolia Test Network",
           nativeCurrency: { name: "SepoliaETH", symbol: "ETH", decimals: 18 },
-          rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY"], // replace with your key
+          rpcUrls: ["https://eth-sepolia.g.alchemy.com/v2/IczRrCI0W7PLoMNcIDR24fOrz4fLq19H"], // replace with your key
           blockExplorerUrls: ["https://sepolia.etherscan.io"],
         }],
       });
